@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script lang="Javascript" type="text/Javascript">
+        function table(){
+            var a;
+            x = document.getElementById("start").value;
+            y = document.getElementById("end").value;
+            x = Number(x);
+            y = Number(y);
+            temp=0;
+            if(y>=x){
+                temp = x;
+                document.write("<br><br><br><table border='1' size='18' align='center'>");
+                for(a=1;a<=10;a++){
+                    document.write("<tr>");
+                    for(i=temp;i<=y;i++){
+                        document.write("<td>"+i+"X"+a+"="+i*a+"</td>");
+
+                    }
+                    document.write("</tr>");
+                }
+                document.write("</table>");
+                }
+            else{
+                document.write("Numbers are not Valid");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h4> Welcom to Table.com</h4>
+    Enter a Starting table number : 
+    <input type="number" id="start"><br>
+    Enter a Ending table number :
+    <input type="number" id="end"><br>
+    <input type="button" onclick="table()" value="submit">
+    <hr>
+    
+</body>
+</html>
